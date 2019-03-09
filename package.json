@@ -3,6 +3,9 @@
 	"version": "1.0.0",
 	"description": "Pigeon's Non-Content Moderator Bot",
 	"main": "contentbot.js",
+	"scripts": {
+		"start": "node contentbot.js"
+	},
 	"author": "Bex",
 	"dependencies": {
 		"discord.js": "11.1.0",
