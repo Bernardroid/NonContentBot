@@ -1,35 +1,30 @@
 const Discord = require('discord.js');
+
 const client = new Discord.Client();
 
-//client.login(process.env.BOT_TOKEN);
-
+ 
 
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+
+    console.log('I am ready!');
+
 });
 
-var artChannel = "553776540362473512";
+ 
 
-client.on('message', msg => {
+client.on('message', message => {
 
-	if(msg.channel.id != artChannel)
-	{
-		//console.log(msg.channel.id);
-		//console.log(artChannel);
-		return;
-	}
-	
-	if(msg.attachments.size > 0 || msg.embeds.length > 0)
-	{
-		//Do nothing
-	}
-	else
-	{
-		//msg.channel.send('imma delete this');
-		msg.delete();
-	}
+    if (message.content === 'ping') {
 
-}, 100);
+       message.reply('pong');
 
-client.login(process.env.BOT_TOKEN);
+       }
+
+});
+
+ 
+
+// THIS  MUST  BE  THIS  WAY
+
+client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
 
