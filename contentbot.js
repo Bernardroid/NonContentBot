@@ -8,7 +8,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-var artChannel = "551186283314151424";
+var artChannel = "553776540362473512";
 
 client.on('message', msg => {
 
